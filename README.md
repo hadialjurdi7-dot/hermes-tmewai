@@ -1,5 +1,13 @@
 # tmewai — your own social archive, searchable by your own agent
 
+> **Repository moved — both accounts, same owner.** This plugin now lives at
+> [**tonidan369-maker/hermes-tmewai**](https://github.com/tonidan369-maker/hermes-tmewai).
+> `hadialjurdi7-dot` (this repo) and `tonidan369-maker` (new home) belong to the same owner.
+> The Hermes Agent plugin-directory entry opened in
+> [#152878](https://github.com/NousResearch/hermes-agent/pull/152878) from this account is being
+> relocated to the new repository — a move, not a fork under a different owner. This repo stays
+> live and unmodified; new work lands in the new home.
+
 A **Hermes Agent plugin** that turns a **Facebook JSON export** (Meta's
 `your_activity_across_facebook.zip`) into a local SQLite index your assistant can
 search — messages, comments, reactions, posts — with **Arabic-aware folding**,
