@@ -18,7 +18,7 @@
 
 ## 2. لماذا وُجد المشروع (السياق والقرار)
 
-المستخدم (هادي الجردي) يملك تطبيق **Tmewai** — تطبيق Dart يعالج أرشيف فيسبوك بشكل صحيح:
+المستخدم (المستخدم) يملك تطبيق **Tmewai** — تطبيق Dart يعالج أرشيف فيسبوك بشكل صحيح:
 نموذج بيانات سبع جداول، جدول طيّ عربي، FTS5 مع triggers، قواعد أمان ZIP، وأربعة أشكال JSON.
 
 المشكلة: التطبيق لا يستطيع أن يستخدمه **وكيل ذكاء اصطناعي**. والبديل الساذج — رمي أرشيف كامل داخل محادثة — غير عملي (كبير) وغير آمن (خاص).
@@ -35,12 +35,12 @@
 | العنصر | القيمة |
 |---|---|
 | المستودع العام | https://github.com/hadialjurdi7-dot/hermes-tmewai |
-| الحساب | `hadialjurdi7-dot` (وليس `hadi7` — ذاك صفر مستودعات عامة) |
+| الحساب | `hadialjurdi7-dot`  |
 | البصمة المثبّتة (SHA) | `b010a13bde8ace2d1a28e12fb550003f3fd0ceb4` |
 | طلب الدمج | https://github.com/NousResearch/hermes-agent/pull/152878 |
 | مسار الكاتالوج | `plugin-catalog/tmewai.yaml` |
-| التثبيت المحلي | `/opt/data/plugins/tmewai` |
-| نسخة التطوير | `/opt/data/hermes-tmewai-plugin` |
+| التثبيت المحلي | `$HERMES_HOME/plugins/tmewai` |
+| نسخة التطوير | `<workdir>/hermes-tmewai` |
 | قاعدة البيانات | `$HERMES_HOME/plugin-data/tmewai/archive.db` |
 | الترخيص | MIT |
 | الحجم | 26 ملفاً متعقّباً · 4,183 سطراً |
@@ -216,8 +216,8 @@ OK: 1 file(s) valid
 كل ادعاء من الوكيل **أُعيد تشغيله محلياً** بمسار التثبيت لا بمسار الريبو. الأرقام في القسم 5 هي من هذه الجولة، لا من كلام الوكيل.
 
 ### المرحلة 4 — التفعيل
-- نُسخ البلغن إلى `/opt/data/plugins/tmewai`.
-- أُضيف `tmewai` إلى `plugins.enabled` في `/opt/data/config.yaml` (نسخة احتياطية: `config.yaml.bak-tmewai`).
+- نُسخ البلغن إلى `$HERMES_HOME/plugins/tmewai`.
+- أُضيف `tmewai` إلى `plugins.enabled` في `<local-path> (نسخة احتياطية: `config.yaml.bak-tmewai`).
 - `hermes plugins list` ⇒ **enabled** · `hermes tools list` ⇒ `✓ enabled tmewai` تحت «Plugin toolsets».
 
 ### المرحلة 5 — النشر
